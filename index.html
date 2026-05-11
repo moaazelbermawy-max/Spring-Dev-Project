@@ -3,31 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Name | Developer Portfolio</title>
+    <title>The Giant Owl Boss Fight | Moaaz Elbermawy</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Project Title: [Insert Name]</h1>
-        <p>Developed by: [Your Name(s)]</p>
-        <a href="[Your GitHub Link]" target="_blank" class="github-link">View on GitHub</a>
+        <h1>Spring Dev Project: The Giant Owl</h1>
+        <p>Developed by: Moaaz Elbermawy</p>
+        <a href="https://github.com/moaazelbermawy-max/Spring-Dev-Project.git" target="_blank" class="github-link">View GitHub Repository</a>
     </header>
 
     <main>
         <section class="project-display">
-            <iframe src="[Link to your p5.js web editor embed]" width="600" height="400"></iframe>
+            <iframe 
+                src="https://editor.p5js.org/moaaz.elbermawy/full/YJsliGaVg" 
+                width="600" 
+                height="450" 
+                style="border: none;"
+                allowfullscreen>
+            </iframe>
         </section>
 
         <section class="content">
             <h2>Description:</h2>
-            <p>[Explain what the project does and the motivation behind creating it. If you worked in a pair, mention your collaborative goals here.]</p>
+            <p>This project is a turn-based boss encounter inspired by "bullet-hell" RPGs. I created this to explore complex state management (switching between player turns and enemy attacks) and to practice procedural projectile patterns. The goal was to create a challenging, "juicy" experience featuring screen shake, health bars, and an "Ultimate" phase that triggers when the boss is low on health.</p>
 
             <h2>Instructions:</h2>
             <ul>
-                <li>[Control 1: e.g., Press 'Space' to jump]</li>
-                <li>[Control 2: e.g., Move mouse to aim]</li>
-                <li>[Control 3: e.g., Click to restart]</li>
+                <li><strong>Menu Navigation:</strong> Use the <strong>Arrow Keys</strong> or <strong>A/D</strong> to select between Fight, Item, and Mercy. Press <strong>ENTER</strong> to select.</li>
+                <li><strong>Attacking:</strong> Time your <strong>ENTER</strong> press when the moving bar is in the center of the box for a Critical Hit.</li>
+                <li><strong>Dodging:</strong> During the Enemy Turn, use the <strong>Arrow Keys (or WASD)</strong> to move your heart and avoid the projectiles.</li>
+                <li><strong>Items:</strong> Use "Item" to consume a pie and heal 10 HP when your health is low.</li>
             </ul>
 
             <hr>
@@ -35,21 +42,21 @@
             <h2>Learning Goal: Methods & Logic</h2>
             
             <div class="method-box">
-                <h3>Parameter Method</h3>
-                <img src="parameter-method-screenshot.png" alt="Screenshot of method with parameters">
-                <p>This method stores instructions for [Action]. It was useful because it allowed us to call the function multiple times with different inputs, reducing code redundancy by [Explain why].</p>
+                <h3>Method with Parameters</h3>
+                <img src="param-method.png" alt="Screenshot of the takeDamage method">
+                <p>The <code>takeDamage(amount)</code> method stores the instructions for reducing the player's health, triggering visual screen shake, and setting invincibility frames. It was useful to create this because it is called by many different types of projectiles (normal circles, walls, and lasers). Instead of rewriting the damage logic for every attack, I simply pass the "amount" of damage as a parameter.</p>
             </div>
 
             <div class="method-box">
-                <h3>Return Value Method</h3>
-                <img src="return-method-screenshot.png" alt="Screenshot of method with return value">
-                <p>This method calculates [Calculation] and returns [Value]. Creating this was useful because it allowed the program to dynamically use the result of this logic in [Part of the program].</p>
+                <h3>Method with Return Value</h3>
+                <img src="return-method.png" alt="Screenshot of the getTelegraph method">
+                <p>The <code>getTelegraph(nextAttackIndex)</code> method stores a list of text strings and returns a specific message based on which attack is coming next. This was useful because it allows the game to "look ahead" at the turn counter and provide the player with a warning message in the UI, keeping the main <code>handleEnemyTurn</code> function clean and focused on physics.</p>
             </div>
 
             <hr>
 
             <h2>LLM Assistance Attribution</h2>
-            <p>[Describe which parts were AI-assisted. For example: "We used an LLM to brainstorm the physics logic for the jumping mechanic..." or "We did not use an LLM because..."]</p>
+            <p>I utilized AI assistance for generating code in order to speed up my design process. I then utilized this code by reading through and understanding all of it so that I may code it and use it in many forms and learn from it. </p>
         </section>
     </main>
 
